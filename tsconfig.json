@@ -33,6 +33,7 @@
         "./app/*"
       ],
       "@/components/*": [
+        "./components/*",
         "./app/components/*"
       ],
       "@/lib/*": [

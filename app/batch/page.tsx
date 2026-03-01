@@ -65,7 +65,7 @@ export default function BatchPage() {
             try {
                 new URL(url);
                 validUrls.push(url);
-            } catch (e) {
+            } catch {
                 invalidUrls.push(url);
             }
         });
@@ -139,7 +139,7 @@ export default function BatchPage() {
                 description: `Successfully processed ${successCount} out of ${fullResults.length} URLs.`,
             });
 
-        } catch (err) {
+        } catch {
             toast({
                 title: "Network Error",
                 description: "Failed to connect to the server.",
@@ -188,7 +188,7 @@ export default function BatchPage() {
             URL.revokeObjectURL(url);
 
             toast({ title: "ZIP Downloaded!" });
-        } catch (e) {
+        } catch {
             toast({ title: "Failed to generate ZIP", variant: "destructive" });
         }
     }
